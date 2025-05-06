@@ -18,7 +18,7 @@ app.set("trust proxy", 1);
 // Global middlewares
 app.use(helmet());
 const corsOptions = {
-  origin: ["http://localhost:5173" ], // your frontend domain
+  origin: ["http://localhost:5173" ,"https://front-end-mini.vercel.app"], // your frontend domain
   credentials: true, // ✅ allow cookies to be sent
 };
 
@@ -79,7 +79,7 @@ app.get("/", (req, res) => {
 // Centralized error handling
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 (async () => {
   try {
